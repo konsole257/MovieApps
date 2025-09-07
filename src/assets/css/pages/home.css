@@ -1,0 +1,23 @@
+/**
+* --------------------------------
+* Home CSS
+* --------------------------------
+*/
+
+.block {padding: 16px 16px;overflow: hidden;overflow-x: auto;}
+.block__tit {position: sticky;left: 0;font-size: 12px;margin-bottom: 16px;}
+
+.visual {position:relative;}
+/* .visual:after {content: '';position: absolute;bottom: 0;left: 0;width: 100%;height: 50%;background: linear-gradient(rgba(0, 0, 0, 0), #242424);} */
+.visual__img {width: 100%;}
+.visual__txt {position: absolute;z-index: 1;bottom: 16px;left: 16px;font-weight: 700;}
+
+.suggest__list {display: flex;flex-wrap: nowrap;gap: 16px;}
+.suggest__item {flex: 1;min-width: 99px;height: 127px;border-radius: 9px;overflow: hidden;}
+.suggest__link {display: block;height: 100%;}
+.suggest__img {width: 100%;height: 100%;object-fit: cover;object-position: center;}
+
+.movie__list {display: flex;flex-wrap: nowrap;gap: 16px;}
+.movie__item {flex: 1;min-width: 99px;height: 127px;border-radius: 9px;overflow: hidden;}
+.movie__link {display: block;height: 100%;}
+.movie__img {width: 100%;height: 100%;object-fit: cover;object-position: center;}

@@ -1,0 +1,31 @@
+/**
+* --------------------------------
+* Init CSS
+* --------------------------------
+*/
+
+:root {font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;font-weight: 400;font-size: 14px;color: rgba(255, 255, 255, 0.87);word-break: keep-all;word-wrap: break-word;background-color: #242424;color-scheme: light dark;font-synthesis: none;text-rendering: optimizeLegibility;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;container-name: root;container-type: inline-size;}
+h1,h2,h3,h4,h5,h6 {font-weight: 700;margin: 0;}
+ul, ol {padding: 0;margin: 0;list-style: none;}
+table {table-layout: fixed;width: 100%;border-collapse: collapse;border-spacing: 0;}
+th {padding: 0;}
+td {padding: 0;}
+dl,dd {margin: 0;}
+figure {margin: 0;}
+img {vertical-align: top;}
+fieldset {margin: 0;padding: 0;border: none;}
+textarea {resize: none;}
+p {margin: 0;}
+a {text-decoration: none;color: rgba(255, 255, 255, 0.87);-webkit-tap-highlight-color: transparent;cursor: pointer;}
+hr {display: none;}
+
+.hidden {position: absolute;width: 1px;height: 1px;white-space: nowrap;margin: -1px;overflow: hidden;clip-path: polygon(0 0, 0 0, 0 0);}
+
+    
+@media (min-width: 1280px) {
+  ::-webkit-scrollbar {width: 10px;height: 10px;}
+  ::-webkit-scrollbar-track {background-color: #000;}
+  ::-webkit-scrollbar-thumb {border-radius: 5px;background-color: #555;}
+  ::-webkit-scrollbar-button {display: none;}
+  ::-webkit-scrollbar-thumb:hover {background-color: #444;}
+}
