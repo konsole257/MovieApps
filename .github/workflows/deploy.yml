@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn  # npm 사용하면 npm으로 변경
+          cache: yarn
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
