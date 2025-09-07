@@ -1,4 +1,4 @@
-import '@/assets/css/pages/Detail.css';
+import '@/assets/css/pages/detail.css';
 
 const Detail = () => {
   return (
