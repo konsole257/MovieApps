@@ -1,4 +1,7 @@
-# React + TypeScript + Vite
+# Vite + React + Redux + TypeScript
+
+- URL  
+https://konsole257.github.io/MovieApp/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

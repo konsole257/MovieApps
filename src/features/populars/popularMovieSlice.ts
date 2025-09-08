@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-const TMDB_API_KEY = import.meta.env.VITE_TMDB_TOKEN;
 
 export interface PopularMovie {
   id: number;
@@ -28,7 +27,7 @@ export const fetchPopularMovies = createAsyncThunk('populars/fetchPopularMovie',
           method: 'GET',
           headers: {
             accept: 'application/json',
-            Authorization: `Bearer ${TMDB_API_KEY}`,
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMGZkMTliYzZjMTdjMWEwYmRjNjBiZmU3NDlkNjA3MyIsIm5iZiI6MTc1Njk3NjM4MC4yMjg5OTk5LCJzdWIiOiI2OGI5NTRmYzU1ZmY1NWI1ZTU4Y2RjYzIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.upYdoeXCbkJz1BBUhnYx0eTYrOPVITTwzNU7AuB0hcw',
           },
         }
       );
