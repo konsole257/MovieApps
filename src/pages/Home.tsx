@@ -19,7 +19,7 @@ const Home = () => {
       </div>
 
       <div className='visual'>
-        <img  className="visual__img" src="/images/temp/screen@2x.png" alt="" />
+        <img  className="visual__img" src={`${import.meta.env.BASE_URL}/images/temp/screen@2x.png`} alt="" />
         <div className="visual__txt">Wanda Vision</div>
       </div>
 
