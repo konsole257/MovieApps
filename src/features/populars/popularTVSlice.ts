@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+const TMDB_API_KEY = import.meta.env.VITE_TMDB_TOKEN;
 
 export interface PopularTV {
   id: number;
@@ -27,7 +28,7 @@ export const fetchPopularTVs = createAsyncThunk('populars/fetchPopularTV',
           method: 'GET',
           headers: {
             accept: 'application/json',
-            Authorization: `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`,
+            Authorization: `Bearer ${TMDB_API_KEY}`,
           },
         }
       );
