@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import Home from "../pages/Home";
 import HomeMovie from "../pages/HomeMovie";
@@ -9,11 +9,9 @@ import Mypage from "../pages/Mypage";
 import Detail from "../pages/Detail";
 
 export const AppRouter = () => {
-  const location = useLocation();
-
   return (
   <>
-    <Routes location={location}>
+    <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/Popular" element={<Home />}>
