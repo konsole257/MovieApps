@@ -7,6 +7,8 @@
 .block {padding: 16px 16px;overflow: hidden;overflow-x: auto;}
 .block-tit {position: sticky;left: 0;font-size: 12px;margin-bottom: 16px;}
 
+.tab-list {position: sticky;z-index: 2;top: 0;background-color: rgba(36, 36, 36, 0.8);backdrop-filter: blur(6px);-webkit-backdrop-filter: blur(6px);}
+
 .visual {position:relative;}
 .visual-img {width: 100%;}
 .visual-txt {position: absolute;z-index: 1;bottom: 16px;left: 16px;font-weight: 700;}
