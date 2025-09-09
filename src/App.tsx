@@ -5,7 +5,7 @@ import { AppRouter } from './app/router';
 function App() {
   return (
   <>
-    <BrowserRouter basename="/MovieApp">
+    <BrowserRouter basename="/MovieApp/">
       <AppRouter />
     </BrowserRouter>
   </>

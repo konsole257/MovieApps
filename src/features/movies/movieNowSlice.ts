@@ -1,27 +1,27 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export interface PopularTV {
+export interface MovieNow {
   id: number;
   title: string;
   poster_path: string;
 };
 
-interface PopularTVsState {
-  items: PopularTV[];
+interface MovieNowsState {
+  items: MovieNow[];
   loading: boolean;
   error: string | null;
 };
 
-const initialState: PopularTVsState = {
+const initialState: MovieNowsState = {
   items: [],
   loading: false,
   error: null,
 };
 
-export const fetchPopularTVs = createAsyncThunk('populars/fetchPopularTV',
+export const fetchMovieNows = createAsyncThunk('movies/fetchMovieNow',
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch('https://api.themoviedb.org/3/tv/popular?language=ja-JP&page=1',
+      const res = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=ja-JP&page=1',
         {
           method: 'GET',
           headers: {
@@ -38,7 +38,7 @@ export const fetchPopularTVs = createAsyncThunk('populars/fetchPopularTV',
       
       const data = await res.json();
 
-      return data.results as PopularTV[];
+      return data.results as MovieNow[];
 
     } catch (err: unknown) {
       if (err instanceof Error) {
@@ -50,25 +50,25 @@ export const fetchPopularTVs = createAsyncThunk('populars/fetchPopularTV',
   }
 );
 
-const PopularTVsSlice = createSlice({
-  name: 'popularTVs',
+const MovieNowsSlice = createSlice({
+  name: 'movieNows',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchPopularTVs.pending, (state) => {
+      .addCase(fetchMovieNows.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchPopularTVs.fulfilled, (state, action) => {
+      .addCase(fetchMovieNows.fulfilled, (state, action) => {
         state.loading = false;
         state.items = action.payload;
       })
-      .addCase(fetchPopularTVs.rejected, (state, action) => {
+      .addCase(fetchMovieNows.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload as string || action.error.message || 'Failed to fetch movies';
       });
   },
 });
 
-export default PopularTVsSlice.reducer;
+export default MovieNowsSlice.reducer;

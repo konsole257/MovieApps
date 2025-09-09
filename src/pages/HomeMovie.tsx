@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import '@/assets/css/pages/home.css';
 
-import PopularMovies from '../features/populars/popularMovie';
-import PopularTVs from '../features/populars/popularTV';
-import PopularPersons from '../features/populars/popularPerson';
+import MovieNow from '../features/movies/movieNow';
+import MovieTop from '../features/movies/movieTop';
+import MovieUp from '../features/movies/movieUp';
 
 const Home = () => {
   return (
@@ -23,30 +23,28 @@ const Home = () => {
       </div>
 
       <section className="block movie">
-        <h2 className="block-tit movie-tit">Movies</h2>
+        <h2 className="block-tit movie-tit">Now Playing</h2>
 
         <ul className="movie-list">
-          <PopularMovies />
+          <MovieNow />
         </ul>
       </section>
 
-      <section className="block tv">
-        <h2 className="block-tit tv-tit">TV Show</h2>
+      <section className="block movie">
+        <h2 className="block-tit movie-tit">Top Rated</h2>
 
-        <ul className="tv-list">
-          <PopularTVs />
+        <ul className="movie-list">
+          <MovieTop />
         </ul>
       </section>
 
-      <section className="block person">
-        <h2 className="block-tit person-tit">Person</h2>
+      <section className="block movie">
+        <h2 className="block-tit movie-tit">Upcoming</h2>
 
-        <ul className="person-list">
-          <PopularPersons />
+        <ul className="movie-list">
+          <MovieUp />
         </ul>
       </section>
-
-      
     </div>
   </>
   );

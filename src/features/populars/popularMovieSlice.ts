@@ -3,7 +3,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export interface PopularMovie {
   id: number;
   title: string;
-  overview: string;
   poster_path: string;
 };
 
@@ -22,7 +21,7 @@ const initialState: PopularMoviesState = {
 export const fetchPopularMovies = createAsyncThunk('populars/fetchPopularMovie',
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch('https://api.themoviedb.org/3//movie/popular?language=ja-JP&page=1',
+      const res = await fetch('https://api.themoviedb.org/3/movie/popular?language=ja-JP&page=1',
         {
           method: 'GET',
           headers: {

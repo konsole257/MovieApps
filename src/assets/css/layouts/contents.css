@@ -4,5 +4,5 @@
 * --------------------------------
 */
 
-#main {height: calc(100dvh - 68px);padding-bottom: 16px;overflow: hidden;overflow-y: auto;box-sizing: border-box;}
+#main {height: 100dvh;padding-bottom: 84px;margin-bottom: -68px;overflow: hidden;overflow-y: auto;box-sizing: border-box;}
 .page-tit {position: absolute;width: 1px;height: 1px;white-space: nowrap;margin: -1px;overflow: hidden;clip-path: polygon(0 0, 0 0, 0 0);}
