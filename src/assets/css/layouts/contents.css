@@ -5,4 +5,25 @@
 */
 
 #main {height: 100dvh;padding-bottom: 84px;margin-bottom: -68px;overflow: hidden;overflow-y: auto;box-sizing: border-box;}
+.page {position: relative;transform: rotateX('100');}
 .page-tit {position: absolute;width: 1px;height: 1px;white-space: nowrap;margin: -1px;overflow: hidden;clip-path: polygon(0 0, 0 0, 0 0);}
+.page-translate {position: fixed;z-index: 10;top: 0;right: 0;width: 100vw;height: 100dvh;background-color: #242424;}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 300ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 300ms ease-in-out;
+}

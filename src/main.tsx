@@ -7,7 +7,6 @@ import '@/assets/css/init.css';
 import '@/assets/css/components/tab.css';
 import App from './App';
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>

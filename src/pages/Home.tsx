@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+
 import '@/assets/css/pages/home.css';
 
 import PopularMovies from '../features/populars/popularMovie';
@@ -6,6 +7,8 @@ import PopularTVs from '../features/populars/popularTV';
 import PopularPersons from '../features/populars/popularPerson';
 
 const Home = () => {
+  
+
   return (
   <>
     <div className="page home">
@@ -45,8 +48,6 @@ const Home = () => {
           <PopularPersons />
         </ul>
       </section>
-
-      
     </div>
   </>
   );

@@ -21,7 +21,7 @@ const PopularTVs = () => {
   <>
     {popularTVs.map((popularTV) => (
       <li className="movie-item" key={popularTV.id}>
-        <NavLink className="movie-link" to="/Detail">
+        <NavLink className="movie-link" to="/Popular/Detail">
           <img className="movie-img" loading="lazy" src={`https://image.tmdb.org/t/p/w200${popularTV.poster_path}`} alt={popularTV.title} />
         </NavLink>
       </li>
