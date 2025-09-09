@@ -13,7 +13,7 @@ const Home = () => {
       <h1 className="page-tit">Home</h1>
 
       <ul className="tab-list">
-        <li><NavLink className={location.pathname.endsWith('/MovieApp/#/') ? 'tab-link active' : 'tab-link'} to="/">Popular</NavLink></li>
+        <li><NavLink className="tab-link" to="/">Popular</NavLink></li>
         <li><NavLink className="tab-link" to="/Movie">Movie</NavLink></li>
         <li><NavLink className="tab-link" to="/TV">TV Show</NavLink></li>
       </ul>

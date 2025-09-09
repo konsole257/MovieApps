@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { BASE_URL } from "../path";
 
 import '@/assets/css/pages/home.css';
 
@@ -14,13 +15,13 @@ const Home = () => {
       <h1 className="page-tit">Home</h1>
 
       <ul className="tab-list">
-        <li><NavLink className={location.pathname.endsWith('/MovieApp/#/') ? 'tab-link active' : 'tab-link'} to="/">Popular</NavLink></li>
+        <li><NavLink className="tab-link" to="/">Popular</NavLink></li>
         <li><NavLink className="tab-link" to="/Movie">Movie</NavLink></li>
         <li><NavLink className="tab-link" to="/TV">TV Show</NavLink></li>
       </ul>
 
       <div className="visual">
-        <img  className="visual-img" src={`${import.meta.env.BASE_URL}/images/temp/screen@2x.png`} alt="" />
+        <img  className="visual-img" src={`${BASE_URL}/images/temp/screen@2x.png`} alt="" />
         <div className="visual-txt">Wanda Vision</div>
       </div>
 
