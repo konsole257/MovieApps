@@ -1,28 +1,27 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export interface PopularMovie {
+export interface PopularPerson {
   id: number;
-  title: string;
-  overview: string;
-  poster_path: string;
-};
+  name: string;
+  profile_path: string;
+}
 
-interface PopularMoviesState {
-  items: PopularMovie[];
+interface PopularPersonState {
+  items: PopularPerson[];
   loading: boolean;
   error: string | null;
-};
+}
 
-const initialState: PopularMoviesState = {
+const initialState: PopularPersonState = {
   items: [],
   loading: false,
   error: null,
 };
 
-export const fetchPopularMovies = createAsyncThunk('populars/fetchPopularMovie',
+export const fetchPopularPersons = createAsyncThunk('populars/fetchPopularPerson',
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch('https://api.themoviedb.org/3//movie/popular?language=ja-JP&page=1',
+      const res = await fetch('https://api.themoviedb.org/3/person/popular?language=ja-JP&page=1',
         {
           method: 'GET',
           headers: {
@@ -39,7 +38,7 @@ export const fetchPopularMovies = createAsyncThunk('populars/fetchPopularMovie',
       
       const data = await res.json();
 
-      return data.results as PopularMovie[];
+      return data.results as PopularPerson[];
 
     } catch (err: unknown) {
       if (err instanceof Error) {
@@ -51,25 +50,25 @@ export const fetchPopularMovies = createAsyncThunk('populars/fetchPopularMovie',
   }
 );
 
-const PopularMoviesSlice = createSlice({
-  name: 'popularMovies',
+const PopularPersonsSlice = createSlice({
+  name: 'popularPersons',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchPopularMovies.pending, (state) => {
+      .addCase(fetchPopularPersons.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchPopularMovies.fulfilled, (state, action) => {
+      .addCase(fetchPopularPersons.fulfilled, (state, action) => {
         state.loading = false;
         state.items = action.payload;
       })
-      .addCase(fetchPopularMovies.rejected, (state, action) => {
+      .addCase(fetchPopularPersons.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload as string || action.error.message || 'Failed to fetch movies';
       });
   },
 });
 
-export default PopularMoviesSlice.reducer;
+export default PopularPersonsSlice.reducer;

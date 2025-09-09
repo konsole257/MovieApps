@@ -1,14 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
   <>
     <header id="header">
       <nav id="nav">
-        <ul className="nav__list">
-          <li><NavLink className="nav__link" to="/Popular">Popular</NavLink></li>
-          <li><NavLink className="nav__link" to="/Movie">Movie</NavLink></li>
-          <li><NavLink className="nav__link" to="/TV">TV Show</NavLink></li>
+        <ul className="nav-list">
+          <li><NavLink className="nav-link" to="/Popular">Popular</NavLink></li>
+          <li><NavLink className="nav-link" to="/Movie">Movie</NavLink></li>
+          <li><NavLink className="nav-link" to="/TV">TV Show</NavLink></li>
         </ul>
       </nav>
     </header>

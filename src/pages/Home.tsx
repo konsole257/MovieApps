@@ -1,41 +1,48 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import '@/assets/css/pages/home.css';
 
 import PopularMovies from '../features/populars/popularMovie';
 import PopularTVs from '../features/populars/popularTV';
+import PopularPersons from '../features/populars/popularPerson';
 
 const Home = () => {
   return (
   <>
     <div className="page home">
-      <h1 className="page__tit">Home</h1>
+      <h1 className="page-tit">Home</h1>
 
-      <div className="tab">
-        <ul className="tab__list">
-          <li><NavLink className="tab__link" to="/Popular">Popular</NavLink></li>
-          <li><NavLink className="tab__link" to="/Movie">Movie</NavLink></li>
-          <li><NavLink className="tab__link" to="/TV">TV Show</NavLink></li>
-        </ul>
-      </div>
+      <ul className="tab-list">
+        <li><NavLink className="tab-link" to="/Popular">Popular</NavLink></li>
+        <li><NavLink className="tab-link" to="/Movie">Movie</NavLink></li>
+        <li><NavLink className="tab-link" to="/TV">TV Show</NavLink></li>
+      </ul>
 
-      <div className='visual'>
-        <img  className="visual__img" src={`${import.meta.env.BASE_URL}/images/temp/screen@2x.png`} alt="" />
-        <div className="visual__txt">Wanda Vision</div>
+      <div className="visual">
+        <img  className="visual-img" src={`${import.meta.env.BASE_URL}/images/temp/screen@2x.png`} alt="" />
+        <div className="visual-txt">Wanda Vision</div>
       </div>
 
       <section className="block movie">
-        <h2 className="block__tit movie__tit">Movies</h2>
+        <h2 className="block-tit movie-tit">Movies</h2>
 
-        <ul className="movie__list">
+        <ul className="movie-list">
           <PopularMovies />
         </ul>
       </section>
 
-      <section className="block movie">
-        <h2 className="block__tit movie__tit">TV Show</h2>
+      <section className="block tv">
+        <h2 className="block-tit tv-tit">TV Show</h2>
 
-        <ul className="movie__list">
+        <ul className="tv-list">
           <PopularTVs />
+        </ul>
+      </section>
+
+      <section className="block person">
+        <h2 className="block-tit person-tit">Person</h2>
+
+        <ul className="person-list">
+          <PopularPersons />
         </ul>
       </section>
 

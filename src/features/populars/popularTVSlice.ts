@@ -22,7 +22,7 @@ const initialState: PopularTVsState = {
 export const fetchPopularTVs = createAsyncThunk('populars/fetchPopularTV',
   async (_, { rejectWithValue }) => {
     try {
-      const res = await fetch('https://api.themoviedb.org/3//tv/popular?language=ja-JP&page=1',
+      const res = await fetch('https://api.themoviedb.org/3/tv/popular?language=ja-JP&page=1',
         {
           method: 'GET',
           headers: {
@@ -34,7 +34,7 @@ export const fetchPopularTVs = createAsyncThunk('populars/fetchPopularTV',
 
       if (!res.ok) {
         const errorData = await res.json();
-        return rejectWithValue(errorData.status_message || "Failed to fetch");
+        return rejectWithValue(errorData.status_message || 'Failed to fetch');
       }
       
       const data = await res.json();
@@ -46,7 +46,7 @@ export const fetchPopularTVs = createAsyncThunk('populars/fetchPopularTV',
         return rejectWithValue(err.message);
       }
 
-      return rejectWithValue("Network error");
+      return rejectWithValue('Network error');
     }
   }
 );
@@ -67,7 +67,7 @@ const PopularTVsSlice = createSlice({
       })
       .addCase(fetchPopularTVs.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload as string || action.error.message || "Failed to fetch movies";
+        state.error = action.payload as string || action.error.message || 'Failed to fetch movies';
       });
   },
 });

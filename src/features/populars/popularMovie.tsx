@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState, AppDispatch } from '../../app/store';
 import { fetchPopularMovies } from './popularMovieSlice';
@@ -20,9 +20,9 @@ const PopularMovies = () => {
   return (
   <>
     {popularMovies.map((popularMovie) => (
-      <li className="movie__item" key={popularMovie.id}>
-        <NavLink className="movie__link" to="/Detail">
-          <img className="movie__img" loading="lazy" src={`https://image.tmdb.org/t/p/w200${popularMovie.poster_path}`} alt={popularMovie.title} />
+      <li className="movie-item" key={popularMovie.id}>
+        <NavLink className="movie-link" to="/Detail">
+          <img className="movie-img" loading="lazy" src={`https://image.tmdb.org/t/p/w200${popularMovie.poster_path}`} alt={popularMovie.title} />
         </NavLink>
       </li>
     ))}
