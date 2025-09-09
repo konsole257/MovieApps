@@ -15,7 +15,7 @@ const Detail = () => {
       </header>
 
       <div className="page-cotents">
-        <img className="detail-img" src={`${BASE_URL}/images/temp/detail@2x.png`} alt="" />
+        <figure className="cover-fig"><img className="cover-img" src={`${BASE_URL}/images/temp/detail@2x.png`} alt="" /></figure>
       </div>
   
     </div>
