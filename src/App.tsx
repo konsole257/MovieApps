@@ -1,12 +1,14 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { AppRouter } from './app/router';
 
 function App() {
   return (
   <>
-    <BrowserRouter basename="/MovieApp/">
+    {/* <BrowserRouter basename="/MovieApp/"> */}
+    <HashRouter>
       <AppRouter />
-    </BrowserRouter>
+    </HashRouter>
+    {/* </BrowserRouter> */}
   </>
   )
 };
