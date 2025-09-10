@@ -4,7 +4,7 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/MovieApp/',
+  base: '/MovieApps/',
   plugins: [react()],
   preview: {
     port: 8080,
