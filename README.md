@@ -1,4 +1,4 @@
 # Vite + React + Redux + TypeScript
 
-- URL  
+- URL   
 https://konsole257.github.io/MovieApps/
